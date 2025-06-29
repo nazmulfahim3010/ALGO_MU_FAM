@@ -1,8 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
-  int a=10;
-  int b=5;
-  printf()
-
+    int p=30/25;
+    int r=30%25;
+    cout<<p<<"\n"<<r;
 }
