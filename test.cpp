@@ -1,8 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
-  int a=10;
-  int b=5;
-  printf()
+  vector<int>n={1,2,3,4,5};
+  
+  cout<<n[n.size()-1];
 
 }
