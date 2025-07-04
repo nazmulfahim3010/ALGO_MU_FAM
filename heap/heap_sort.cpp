@@ -18,19 +18,21 @@ int main(){
      for(int i=n/2-1;i>=0;i--){
         heapify(tree,n,i);
      }
-      
-     int x=n/2-1;
-     for(int i=0;i<tree.size();i++){
-        
-        heap_sort.push_back(tree[i]);
-        swap(tree[i],tree[tree.size()-1]);
-        tree[tree.size()-1]=0;
-        heapify(tree,n,x);//problem
-        x--;
 
+     cout<<"binary tree\n";
+     for(auto item:tree){
+        cout<<item<<" ";
      }
+    
+     cout<<"\n";
+
+     for(int i=n-1;i>=0;i--){
+        swap(tree[0],tree[i]);
+        heapify(tree,i,0);
+     }
+     
      cout<<"heap sort\n";
-     for(auto item : heap_sort){
+     for(auto item : tree){
         cout<<item<<" ";
      }
 
