@@ -27,10 +27,10 @@ int main(){
      cout<<"\n";
 
      for(int i=n-1;i>=0;i--){
-        swap(tree[0],tree[i]);
+        swap(tree[0],tree[i]);//sort
         heapify(tree,i,0);
      }
-     
+
      cout<<"heap sort\n";
      for(auto item : tree){
         cout<<item<<" ";
