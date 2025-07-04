@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 void heapify(vector<int>&tree,int n,int i);
+void insertion_heapify(vector<int>&tree);
 
 int main(){
     int n;
@@ -37,9 +38,40 @@ int main(){
         cout<<item<<" ";
      }
 
-    
+    insertion_heapify(tree);
 
 }
+
+void insertion_heapify(vector<int>& tree){
+   while(true){
+    cout<<"DO you want to insert a number?(y/n) ";
+    string ask;
+    cin>>ask;
+    if(ask=="yes" || ask=="y"){
+        int node;
+        cout<<"Enter node: ";
+        cin>>node;
+
+        tree.push_back(node);
+
+        for(int i=(tree.size()/2)-1;i>=0;i--){
+            heapify(tree,tree.size(),i);
+        }
+
+        cout<<"insertion done: \n";
+        for(auto item : tree){
+            cout<<item<<" ";
+
+        }
+    }
+    else{
+        break;
+    }
+
+   }
+   
+}
+
 
 void heapify(vector<int>&tree,int n,int i){
     int parent,left,right;
@@ -58,3 +90,8 @@ void heapify(vector<int>&tree,int n,int i){
         heapify(tree,n,parent);
     }
 }
+
+
+// heap insertion and deletion :
+
+// https://www.geeksforgeeks.org/insertion-and-deletion-in-heaps/

@@ -60,6 +60,9 @@ void delete_heap(vector<int>&tree,int n){
     }
 
 }
+// heap insertion and deletion :
+
+// https://www.geeksforgeeks.org/insertion-and-deletion-in-heaps/
 
 void heapify(vector<int>&tree,int n,int i){
     int parent,left, right;
