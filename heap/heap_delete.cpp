@@ -24,9 +24,12 @@ int main(){
         cout<<item<<" ";
     }
     while(true){
+        
         string ask;
         cout<<"delete element (y/n)\n";
         cin>>ask;
+
+        
         
         if(ask=="yes"||ask=="y"){
             delete_heap(tree,n);
@@ -49,10 +52,11 @@ int main(){
 }
 
 void delete_heap(vector<int>&tree,int n){
-    if(tree.empty()==true){
-            cout<<"all element has been deleted";//fix need
-
-        }
+    if (tree.empty()) {
+        cout << "All elements have already been deleted.\n";
+        return;
+    }
+    
     swap(tree[0],tree[tree.size()-1]);
     tree.pop_back();
     for(int i=((tree.size()-1)/2)-1;i>=0;i--){
