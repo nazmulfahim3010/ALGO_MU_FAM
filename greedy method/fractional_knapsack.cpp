@@ -12,7 +12,7 @@ using namespace std;
     cout<<"number of item: ";
     cin>>n;
     cout<<"enter profit and weight : "; 
-    
+
     for(int i=0;i<n;i++){
         int x,y;
         cin>>x>>y;
@@ -37,7 +37,6 @@ using namespace std;
            }
         }
         
-
         if((bag+v[max_item_index].second)<=cap){
             bag += v[max_item_index].second;
             profit += v[max_item_index].first;
