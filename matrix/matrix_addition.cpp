@@ -11,7 +11,6 @@ int main(void){
     cin>>r2>>c2;
 
     vector<vector<int>> m1(r1,vector<int>(c1,0));
-    for(int i=0...)
     vector<vector<int>> m2(r2,vector<int>(c2,0));
     
 
@@ -31,12 +30,6 @@ int main(void){
             cout<<"\n";
         }
 
-
-
-
-
     }
-
-    
 
 }
