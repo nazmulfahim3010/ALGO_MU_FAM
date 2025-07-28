@@ -12,6 +12,7 @@ using namespace std;
     cout<<"number of item: ";
     cin>>n;
     cout<<"enter profit and weight : "; 
+    
     for(int i=0;i<n;i++){
         int x,y;
         cin>>x>>y;
