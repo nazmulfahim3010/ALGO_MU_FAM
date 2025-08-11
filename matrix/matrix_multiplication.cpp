@@ -10,12 +10,12 @@ int main(){
         cout<<"not possible"<<endl;
         return 0;
     }
-    int matc[r1][c2]={0};
+    vector<vector<int>>matc(r1,vector<int>(c2,0));
 
     for(int i=0;i<r1;i++){
         for(int j=0;j<c1;j++){
             cin>>mata[i][j];
-        }
+        } 
     }
 
      for(int i=0;i<r2;i++){

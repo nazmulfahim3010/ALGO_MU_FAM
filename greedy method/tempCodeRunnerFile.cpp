@@ -1,16 +1,15 @@
 # include<bits/stdc++.h>
 using namespace std;
  int main(){
-    int cap;
-    cout<<"load capacity: ";  
-    cin>>cap;
-    vector<pair<int,int>>v;
+    int cap=50;
+    vector<pair<int,int>>v ;//={{60,10},{100,20},{120,30}}
+    //{60,100,30};
+    //vector<int >wt={10,20,30};//{10,20,30};
     vector<double>item;
     int n;
     cout<<"number of item: ";
     cin>>n;
     cout<<"enter profit and weight : "; 
-
     for(int i=0;i<n;i++){
         int x,y;
         cin>>x>>y;
@@ -20,7 +19,6 @@ using namespace std;
 
     for(int i=0;i<v.size();i++){
         item.push_back((double)v[i].first/v[i].second);
-    }
 
     double bag =0.00;
     double profit = 0.00;
@@ -35,6 +33,7 @@ using namespace std;
            }
         }
         
+
         if((bag+v[max_item_index].second)<=cap){
             bag += v[max_item_index].second;
             profit += v[max_item_index].first;
@@ -53,8 +52,8 @@ using namespace std;
     
 
 
-   cout<<"so the profit is : "<<  profit;
+   cout<<profit;
 
     
  }
- /// time comlexity n^2;
+ }
